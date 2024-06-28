@@ -1,0 +1,194 @@
+.feauters {
+    background: var(--bg);
+    padding: 200px 0;
+    &__title {
+        margin-bottom: 100px;
+    }
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        margin-bottom: 100px;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 350px;
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        gap: 10px;
+    }
+    &__caption {
+        width: 100%;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 117%;
+        letter-spacing: 0.03em;
+        color: var(--main);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &::before {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        &_life::before {
+            width: 55px;
+            background: url(../icons/feauters/life.svg) center center / contain no-repeat;
+        }
+        &_leave::before {
+            background: url(../icons/feauters/leave.svg) center center / contain no-repeat;
+        }
+        &_learn::before {
+            background: url(../icons/feauters/learn.svg) center center / contain no-repeat;
+        }
+    }
+    &__inner {
+        display: grid;
+        grid-template-columns: 3fr 2fr 5fr;
+        align-items: center;
+    }
+
+    &__stat {
+        grid-column: 1 / 2;
+        width: 100%;
+        min-height: 100%;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 129%;
+        letter-spacing: 0.04em;
+        color: var(--main);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__graph {
+        width: 100%;
+        span {
+            display: flex;
+            font-weight: 400;
+            font-size: 24px;
+            font-weight: 400;
+            text-align: right;
+            // align-items: center;
+            &::before {
+                content: '';
+                background: url(../../icons/feauters/waves.svg) bottom center / contain no-repeat;
+                width: 100%;
+                display: inline-block;
+                margin-right: 10px;
+            }
+        }
+    }
+    &__text {
+        grid-column: 3 / 4;
+        display: grid;
+        grid-template-rows: repeat(2, max-content);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .feauters {
+        padding: 180px 0;
+        &__item {
+            width: 300px;
+        }
+        &__inner {
+            grid-template-columns: 3fr 1fr 5fr;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .feauters {
+        padding: 160px 0;
+        &__title {
+            margin-bottom: 80px;
+        }
+        &__info {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 80px;
+            flex-wrap: wrap;
+        }
+        &__item {
+            width: 220px;
+        }
+        &__caption {
+            font-size: 20px;
+            &::before {
+                content: '';
+                display: block;
+                width: 45px;
+                height: 45px;
+                margin-right: 10px;
+            }
+            &_life::before {
+                width: 50px;
+            }
+        }
+        &__inner {
+            grid-template-columns: 3fr 5fr;
+            gap: 60px;
+        }
+        &__graph {
+            width: 100%;
+            span {
+                font-size: 20px;
+            }
+        }
+        &__text {
+            grid-column: 2 / 3;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .feauters {
+        padding: 140px 0;
+        &__title {
+            margin-bottom: 80px;
+        }
+        &__info {
+            justify-content: space-evenly;
+        }
+        &__item {
+            width: 240px;
+        }
+        &__inner {
+            gap: 40px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .feauters {
+        padding: 100px 0;
+        &__title {
+            margin-bottom: 60px;
+        }
+        &__info {
+            justify-content: center;
+            margin-bottom: 60px;
+        }
+        &__item {
+            width: 300px;
+        }
+        &__inner {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        &__graph {
+            max-width: 320px;
+            margin-bottom: 20px;
+        }
+        &__text {
+            grid-column: 1 / 2;
+        }
+    }
+}
