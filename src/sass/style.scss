@@ -12,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Roboto Condensed", sans-serif;
+    color: var(--main);
 }
 
 // font-family: "Raleway", sans-serif;
@@ -24,11 +25,11 @@ ul[class], li[class] {
 a {
     text-decoration: none;
 }
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+// img {
+//     width: 100%;
+//     height: 100%;
+//     object-fit: cover;
+// }
 
 
 
