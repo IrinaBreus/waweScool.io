@@ -204,12 +204,23 @@
             «Если сомневаешься – иди катайся»
             <span>Нэт Янг, первый Чемпион Мира по сёрфингу</span>
         </blockquote>
-        <div class="container">
-            <div class="galery__video">
-                <button class="galery__play-btn">
-                    <img src="icons/play.svg" alt="кнопка воспроизведения">
-                </button>
+        <div class="galery__video">
+            <div class="container">
+                <div class="galery__video-wrapper">
+                    <button class="galery__play-btn" >
+                        <img src="icons/play.svg" alt="кнопка воспроизведения">
+                    </button>
+                    <div class="galery__overlay">
+                        <div class="galery__video-player">
+                            
+                            <div id="player"></div>
+                            <div class="galery__video-close">&times;</div>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
+        <div class="container">
             <div class="galery__info">
                 <div class="galery__number">
                     450
