@@ -31,7 +31,8 @@ a {
 //     object-fit: cover;
 // }
 
-
+@import '../../node_modules/swiper/swiper.scss';
+@import '../../node_modules/swiper/modules/pagination.scss';
 
 @import 'base/*.scss';
 @import 'blocks/*.scss';
