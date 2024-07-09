@@ -64,3 +64,12 @@
         }
     }
 }
+@media (max-width: 375px) {
+    .title {
+        font-size: 28px;
+        &::after {
+            font-size: 36px;
+            bottom: -40%;
+        }
+    }
+}

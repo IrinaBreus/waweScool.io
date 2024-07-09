@@ -13,7 +13,7 @@ filter();
 galeryVideo();
 const swiper = new Swiper('.swiper1', {
     loop:true,
-    spaceBetween: 30,
+    
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
