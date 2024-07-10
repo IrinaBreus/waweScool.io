@@ -1,5 +1,5 @@
 // import calcScroll from './modules/calcScroll';
-// import scrollUp from './modules/scrollUp';
+import scrollUp from './modules/scrollUp';
 
 import Swiper from "swiper";
 import { Pagination } from "swiper/modules";
@@ -23,6 +23,6 @@ const swiper = new Swiper('.swiper1', {
 
 
 
-// scrollUp();
+scrollUp();
 // calcScroll();
 });
