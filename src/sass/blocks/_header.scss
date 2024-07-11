@@ -19,6 +19,7 @@
         }
     }
     &__menu {
+        position: relative;
         grid-column: 3 / 4;
         display: flex;
         justify-content: space-between;
@@ -35,6 +36,9 @@
                 color: var(--white);  
             }
         }
+    }
+    &__menu-btn {
+        display: none;
     }
     &__main {
         min-height: calc(100vh - 88px);
@@ -90,10 +94,8 @@
             gap: 10px;
         }
         &__menu {
-            li {
-                a {
-                    font-size: 20px;
-                }
+            li >a {
+                font-size: 20px;
             }
         }
         &__title {
@@ -112,16 +114,66 @@
 
 @media (max-width: 768px) {
     .header {
+        position: relative;
         &__nav {
             grid-template-columns: max-content 1fr;
             gap: 40px;
         }
+        &__logo {
+            position: relative;
+            z-index: 2;
+        }
         &__menu {
-            grid-column: 2 / 3;
+            background: #928282;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            flex-direction: column;
+            justify-content: center;
+            padding-left: 35%;
+            transition: all .5s;
+            z-index: 1;
             li {
-                a {
-                    font-size: 16px;
-                }
+                padding: 15px 0;
+            }
+        }
+        &__menu_active {
+            top: 0;
+        }
+        &__menu-btn {
+            display: block;
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            width: 32px;
+            height: 2px;
+            background: var(--white);
+            z-index: 2;
+            transition: all .5s;
+            &::after, &::before {
+                content: '';
+                display: block;
+                width: 32px;
+                height: 2px;
+                background: var(--white);
+                transition: all .5s;
+            }
+            &::after {
+                transform: translateY(-12px);
+            }
+            &::before {
+                transform: translateY(10px);
+            }
+        }
+        &__menu-btn_active {
+            background: transparent;
+            &::after {
+                transform: rotate(45deg);
+            }
+            &::before {
+                transform: translateY(2px) rotate(-45deg);
             }
         }
         &__title {
@@ -143,15 +195,9 @@
         &__nav {
             gap: 20px;
         }
-        &__menu {
-            flex-wrap: wrap;
-            justify-content: space-around;
-            li {
-                a {
-                    font-size: 18px;
-                    margin: 0 5px;
-                }
-            }
+        &__menu-btn {
+            top: 65px;
+            right: 30px;
         }
         &__title {
             font-size: 80px;
